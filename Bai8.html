@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArray(marks) {
+        let N=+prompt("nhap so phan tu trong mang")
+        for(let i=0;i<N;i++){
+            marks[i]=+prompt("nhap phan tu thu"+i+" : ")
+        }
+        songuyen.sort(function (a, b) {
+            return b-a
+
+        });
+    }
+
+    function displayArray(marks) {
+        document.write("<br>Mang vua nhap sap xep la: ");
+        for (let i = 0; i < marks.length; i++) {
+            document.write(marks[i] + "  ");
+        }
+
+    }
+    let songuyen =new Array();
+    inputArray(songuyen);
+    displayArray(songuyen);
+
+</script>
+
+</body>
+</html>

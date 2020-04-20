@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArray(marks) {
+        let N = +prompt("nhap so phan tu cua mang");
+        for (let i = 0; i < N; i++) {
+            marks[i] = +prompt("nhap phan tu thu " + i + " :")
+        }
+    }
+    function displayArray(marks) {
+
+        document.write("<br>Mang vua nhap la: ");
+        for (let i = 0; i < marks.length; i++) {
+            document.write(marks[i] + "  ");
+        }
+    }
+    let mang1 = new Array();
+    let mang2 = new Array();
+    let mang3 = new Array();
+    inputArray(mang1);
+    inputArray(mang2);
+    mang3 = mang3.concat(mang1,mang2);
+    displayArray(mang3);
+</script>
+
+</body>
+</html>

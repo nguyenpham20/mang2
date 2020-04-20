@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function inputArray(marks) {
+        let N = +prompt("nhap so phan tu cua mang");
+        for (let i = 0; i < N; i++) {
+            marks[i] = +prompt("nhap phan tu thu " + i + " :")
+        }
+    }
+    function sapxep(marks) {
+        let V = +prompt("Nhap so nguyen can tim")
+        let flag = false;
+        let k;
+        for (let i = 0; i < marks.length; i++) {
+            if (V == marks[i]) {
+                flag = true;
+                k = i;
+                alert("V is in the array");
+                break;
+            }
+        }
+        if (!flag) {
+            alert("V is not in the array");
+        }
+        if (flag==true) {
+            for (let i = k; i < marks.length; i++) {
+                marks[i] = marks[i + 1];
+
+            }
+            songuyen.pop();
+        }
+    }
+    function displayArray(marks) {
+        document.write("<br>Mang vua nhap la: ");
+        for (let i = 0; i < marks.length; i++) {
+            document.write(marks[i] + "  ");
+        }
+    }
+    let songuyen = new Array();
+    inputArray(songuyen);
+    sapxep(songuyen);
+    displayArray(songuyen);
+
+</script>
+
+</body>
+</html>
